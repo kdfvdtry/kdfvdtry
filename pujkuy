@@ -1,0 +1,24 @@
+serverAddr = "IP地址或域名"
+serverPort = 7000
+ 
+[[proxies]]
+name = "web"
+type = "http"
+localPort = 80
+customDomains = ["域名"]
+ 
+ 
+[[proxies]]
+name = "samba"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 445
+remotePort = 4450
+ 
+[[proxies]]
+name = "ssh"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 22
+remotePort = 6000
+ 
