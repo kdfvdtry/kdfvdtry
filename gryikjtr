@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  kettle:
+    image: hiromuhota/webspoon:latest
+    environment:
+      - JPDA_ADDRESS=8000
+      - CATALINA_OPTS="-Dorg.eclipse.rap.rwt.developmentMode=true"
+    ports:
+      - "8080:8080"
+      - "9003:8000"
+    command: ["catalina.sh", "jpda", "run"]
