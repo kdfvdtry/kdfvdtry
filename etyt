@@ -1,0 +1,9 @@
+<button onclick="printFun()">打印</button>
+<div style="page-break-after:always">我是封面</div>
+<div style="page-break-after:always">我是目录，你不知道我的内容有多长</div>
+<div>我是正文，我需要从一个新页面开始展示</div>
+<script>
+ 	function printFun() {
+        window.print();
+    }    
+</script>
