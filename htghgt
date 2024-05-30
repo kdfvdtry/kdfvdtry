@@ -1,0 +1,20 @@
+using UnityEngine;
+using System.Runtime.InteropServices;
+
+/// <summary>
+/// Unity-Vue消息管理脚本
+/// </summary>
+public class MessageManager : MonoBehaviour
+{
+    [DllImport("__Internal")]
+    private static extern void ShowDialog(string msg);//方法名需要jslib书写一致
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ShowDialog("来自Unity的消息");
+        }
+    }
+}
