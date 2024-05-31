@@ -1,0 +1,13 @@
+@GetMapping("/order/userPage")
+ 
+@ResponseBody
+ 
+public R<Page> userPage(Integer page,Integer pageSize){}
+ 
+或
+ 
+@GetMapping("/order/userPage")
+ 
+@ResponseBody
+ 
+public R<Page> userPage(@RequestParam（"page"）Integer page,@RequestParam（"pageSize"）Integer pageSize){}
