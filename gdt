@@ -1,0 +1,58 @@
+#pragma once
+#include<stdio.h>
+#include<stdlib.h>
+#include<windows.h>
+#include<stdbool.h>
+#include<locale.h>
+#include<time.h>
+#define WALL L'□'   //墙
+#define BODY L'●'   //蛇
+#define FOOD L'★'  //食物
+ 
+ 
+typedef struct SnakeNode {
+	int x;
+	int y;
+	struct SnakeNode* next;
+}SnakeNode, * pSnakeNode;
+//蛇的运动方向：上下左右
+enum DIRECTION { UP = 1, DOWN, RIGHT, LEFT };
+//游戏运行状态：正常运行，撞墙，撞自己，非正常结束。
+//非正常结束：比如按Esc退出游戏。
+enum GAME_STATUS { OK, KILL_BY_WALL, KILL_BY_SELF, END_NORMAL };
+ 
+typedef struct GreedySnake {
+	pSnakeNode _pSnake;
+	pSnakeNode _pFood;
+	enum DIRECTION _Dir;
+	enum GAME_STATUS _Status;
+	int _Score;
+	int _FoodWeight;
+	int _SleepTime;//可以理解为蛇的运行速度。
+}GSnake,*pGSnake;
+ 
+#define POS_X 10 //起始位置x
+#define POS_Y 5  //起始位置y
+ 
+//游戏开始
+void GameStart(pGSnake ps);
+ 
+void WelcomeToGame();
+void CreateMap();
+void InitSnake(pGSnake ps);
+void CreateFood(pGSnake ps);
+ 
+//游戏运行
+void GameRun(pGSnake ps); 
+ 
+void PrintHelpInfo();
+#define KEY_PRESS(vk) ((GetAsyncKeyState(vk) & 1) ? 1 : 0)
+void SnakeMove(pGSnake ps);
+int NextisFood(pSnakeNode pNextNode, pGSnake ps);
+void EatFood(pSnakeNode pNextNode, pGSnake ps);
+void NoFood(pSnakeNode pNextNode, pGSnake ps);
+void KillByWall(pGSnake ps);
+void KillBySelf(pGSnake ps);
+ 
+void GameEnd(pGSnake ps);
+ 
