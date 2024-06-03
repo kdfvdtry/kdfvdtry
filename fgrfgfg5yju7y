@@ -1,0 +1,8 @@
+    //用集合来接收请求参数
+    @RequestMapping("/listParam")
+    //这里的注解:映射，默认用数组接收，若改变用集合来接收请求参数，就需要进行关系上的绑定
+    //一定要注意，请求参数的名称 hobby 一定要与以下方法集合名称保持一致
+    public String listParam(@RequestParam List<String> hobby){
+        System.out.println(hobby);
+        return "OK";
+    }
