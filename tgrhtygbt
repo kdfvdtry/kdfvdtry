@@ -1,0 +1,11 @@
+ <!-- 右侧导航栏 -->
+      <div class="news">
+        <h2 class="new_title">黑板报</h2>
+        <ul class="new_list">
+          <li><a href="form1.jsp">通知</a></li>
+          <li><a href="form2.jsp">邀请有礼</a></li>
+          <li><a href="form3.jsp">购买指南</a></li>
+          <li><a href="form4.jsp">文学小说满100减50</a></li>
+
+        </ul>
+      </div>
