@@ -1,0 +1,26 @@
+<div class="tableft">
+					<div class="tableft-list">
+						<h3>鲜花花材</h3>
+					</div>
+					<hr size="1" color="#A2A2A2"/>
+					<div class="tableft-list">
+						<p><font face="微软雅黑" size="4"><i>1 </i></font></p>
+						<a href="#">玫瑰</a>
+					</div>
+					<div class="tableft-list">
+						<p><font face="微软雅黑" size="4"><i>2 </i></font></p>
+						<a href="#">康乃馨</a>
+					</div>
+					<div class="tableft-list">
+						<p><font face="微软雅黑" size="4"><i>3 </i></font></p>
+						<a href="#">郁金香</a>
+					</div>
+					<div class="tableft-list">
+						<p><font face="微软雅黑" size="4"><i>4 </i></font></p>
+						<a href="#">马蹄莲</a>
+					</div>
+					<div class="tableft-list">
+						<p><font face="微软雅黑" size="4"><i>5 </i></font></p>
+						<a href="#">向日葵</a>
+					</div>				
+				</div>
