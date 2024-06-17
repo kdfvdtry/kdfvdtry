@@ -1,0 +1,18 @@
+  <view class="indexProductList">
+    <view class="productItemBottom" wx:for="{{recommendProduct}}">
+      <view style="background: url({{item.productPic}});background-size: 100% 100%;" class="productImgBottom"></view>
+      <view class="bottom-productName little">{{item.productName}}</view>
+      <view class="iconBox little">
+        {{item.remark}}
+      </view>
+      <view class="buyBox-bottom">
+        <view class="leftPrice-bottom">
+          <text class="priceFh">￥</text>
+          <text class="bottom-price">{{item.price}}</text>
+          <text class="bottom-oldPrice">￥{{item.proSalePrice}}</text>
+        </view>
+        <view class="rightAdd-bottom" catchtap="btnAddCart" data-index="{{index}}" data-goodsid="{{item.productId}}">
+          <image class="rightAdd-bottom" src="{{imgUrl}}/Areas/dfapi/Content/images/addcart.png" lazy-load="true">
+          </image>
+        </view>
+      </view>
