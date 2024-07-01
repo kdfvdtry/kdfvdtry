@@ -1,0 +1,9 @@
+def get_user_input():
+    user_input = input("Enter a number: ")
+    try:
+        number = int(user_input)
+        print(f"You entered the integer: {number}")
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
+ 
+get_user_input()
